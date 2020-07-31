@@ -1,0 +1,90 @@
+<h3>Leave Application</h3>
+<div class="form-group">
+  <!-- Date input -->
+  <label class="control-label" for="date">From</label>
+  <input
+    class="form-control"
+    id="fromdate"
+    name="date"
+    placeholder="MM/DD/YYY"
+    type="date"
+    [(ngModel)]="leaveform.From"
+  />
+</div>
+<div class="form-group">
+  <label class="radio-inline">
+    <input
+      type="radio"
+      name="fromDayOption"
+      value="1"
+      [(ngModel)]="leaveform.FromIsFullDay"
+    />Full Day
+  </label>
+  <label class="radio-inline">
+    <input
+      type="radio"
+      name="fromDayOption"
+      value="2"
+      [(ngModel)]="leaveform.FromIsFullDay"
+    />Half Day
+  </label>
+</div>
+<div class="form-group">
+  <!-- Date input -->
+  <label class="control-label" for="date">To</label>
+  <input
+    class="form-control"
+    id="todate"
+    name="date"
+    placeholder="MM/DD/YYY"
+    type="date"
+    [(ngModel)]="leaveform.To"
+  />
+</div>
+<div class="form-group">
+  <label class="radio-inline">
+    <input
+      type="radio"
+      name="toDayOption"
+      value="1"
+      [(ngModel)]="leaveform.ToIsFullDay"
+    />Full Day
+  </label>
+  <label class="radio-inline">
+    <input
+      type="radio"
+      name="toDayOption"
+      value="2"
+      [(ngModel)]="leaveform.ToIsFullDay"
+    />Half Day
+  </label>
+</div>
+<div class="form-group">
+  <!-- Date input -->
+  <label class="control-label" for="date">LeaveType</label>
+  <select
+    name="leavetype"
+    id="leavetype"
+    class="form-control"
+    [(ngModel)]="leaveform.LeaveType"
+  >
+    <option value="1">Casual</option>
+    <option value="2">Earned</option>
+  </select>
+</div>
+<div class="form-group">
+  <!-- Date input -->
+  <label class="control-label" for="comment">Comment</label>
+  <textarea
+    class="form-control"
+    rows="5"
+    cols="60"
+    name="Comment"
+    [(ngModel)]="leaveform.EmployeeComment"
+  >
+  </textarea>
+</div>
+<div class="form-group">
+  <!-- Submit button -->
+  <button class="btn btn-primary" (click)="onApply()">Apply</button>
+</div>

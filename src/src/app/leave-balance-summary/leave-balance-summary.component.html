@@ -1,0 +1,19 @@
+<h3>Leave Balance Summary</h3>
+<table class="gridtable">
+    <tr>
+        <th>Leave Type</th>
+        <th>Balance</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let leaveBalance of leaveBalances">
+        <td>
+            {{leaveBalance.LeaveTypeDescription}}
+        </td>
+        <td>
+            {{leaveBalance.NoOfDays}}
+        </td>
+        <td>
+            <input type="button" value="apply" onclick="window.location.href='/apply';">
+        </td>
+    </tr>
+</table>
